@@ -7,8 +7,8 @@ language: java
 sudo: false
 
 before_install:
-  - rvm install 2.3
-  - rvm use 2.3
+  - rvm install 2.5
+  - rvm use 2.5
   - gem install hiptest-publisher
   - hiptest-publisher -c java-testng.conf --only=tests --test-run-id=592092
 
