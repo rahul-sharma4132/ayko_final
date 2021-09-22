@@ -20,19 +20,11 @@ import junit.framework.Assert;
 
 public class Actionwords {
 	public static WebDriver driver;
-	public Actionwords(String browserName) {
+	public Actionwords() {
 
 		
 		driver = null;
-		
-		if (browserName.equalsIgnoreCase("Chrome")) {
-			driver = DriverManager.setupDriver("chrome");
-		}
-		
-		if (browserName.equalsIgnoreCase("Firefox")) {
-			driver = DriverManager.setupDriver("firefox");
-		}
-		
+		driver = DriverManager.setupDriver("chrome");
 	}
 
     public void uRLForRibbleBikesWorks() throws Exception {

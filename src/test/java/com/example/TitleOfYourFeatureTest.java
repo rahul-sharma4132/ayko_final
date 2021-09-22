@@ -9,7 +9,7 @@ public class TitleOfYourFeatureTest {
     @BeforeMethod
     @Parameters({"browser"})
     public void setUp(String browserName) {
-        actionwords = new Actionwords(browserName);
+        actionwords = new Actionwords();
     }
 
     @Test
