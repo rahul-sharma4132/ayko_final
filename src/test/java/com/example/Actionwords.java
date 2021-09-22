@@ -73,7 +73,7 @@ public class Actionwords {
     	try {
     	boolean result = false;
 		String text = driver.getCurrentUrl();
-		Assert.assertTrue(text!=null);
+		Assert.assertTrue(text==null);
     	}catch(Exception e) {
 			e.printStackTrace();
 		}
