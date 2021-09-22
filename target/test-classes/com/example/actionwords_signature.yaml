@@ -1,0 +1,25 @@
+---
+- name: URL for Ribble Bikes works
+  uid: 2364b1d6-e66c-4db0-915d-a4483104a907
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: User hover over accessories in nav section
+  uid: 3d11a9ab-44f6-4f02-9ff0-063c25fef3c7
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: User clicks on Frameset
+  uid: fe118827-581b-46b5-84a8-3b9aa4561e6c
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: User selects Price - Low to High
+  uid: 2b57dee6-59fe-41ab-bf60-f6baaebc900c
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: The price should be in acscending order
+  uid: d071a6f2-4dfc-4896-ab6d-f17e01f3b700
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: User shuts down the browser
+  uid: caf3eb3b-19d9-4603-8074-37c8233b5e53
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e

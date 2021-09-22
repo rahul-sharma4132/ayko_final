@@ -5,15 +5,15 @@ import org.testng.annotations.*;
 public class TitleOfYourFeatureTest {
     // Tags: tag
     public Actionwords actionwords;
-    
-    @BeforeSuite
+
+    @BeforeMethod
     @Parameters({"browser"})
-    public void setUp(String browser) {
-        actionwords = new Actionwords(browser);
+    public void setUp(String browserName) {
+        actionwords = new Actionwords(browserName);
     }
 
     @Test
-    public void accessoriesPageNavigation() throws Exception {
+    public void accessoriesPageNavigation() throws Exception{
         // Given URL for Ribble Bikes works
         actionwords.uRLForRibbleBikesWorks();
         // When User hover over accessories in nav section
