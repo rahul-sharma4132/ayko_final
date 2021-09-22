@@ -20,67 +20,66 @@ import junit.framework.Assert;
 
 public class Actionwords {
 	public static WebDriver driver;
-	public Actionwords(String browserName) {
-
-		
-		driver = null;
-		
-		if (browserName.equalsIgnoreCase("Chrome")) {
-			driver = DriverManager.setupDriver("chrome");
-		}
-		
-		if (browserName.equalsIgnoreCase("Firefox")) {
-			driver = DriverManager.setupDriver("firefox");
-		}
-		
+	public Actionwords() {
+		driver = DriverManager.setupDriver("chrome");
 	}
 
-    public void uRLForRibbleBikesWorks() throws Exception {
-		driver.get("https://www.ribblecycles.co.uk/");
+    public void uRLForRibbleBikesWorks() {
+		try {
+    	driver.get("https://www.ribblecycles.co.uk/");
 		Thread.sleep(500);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
     }
 
-    public void userHoverOverAccessoriesInNavSection()  throws Exception {
+    public void userHoverOverAccessoriesInNavSection()  {
+    	try {
     	Thread.sleep(500);
 		WebElement road_nav = driver.findElement(By.xpath("//ul[@id='nav']//a[@title='Accessories']"));
 		Actions actions = new Actions(driver);
 		actions.moveToElement(road_nav);
 		actions.build().perform();
 		Thread.sleep(500);
+    }catch(Exception e) {
+		e.printStackTrace();
+	}
     }
 
-    public void userClicksOnFrameset()  throws Exception {
+    public void userClicksOnFrameset()  {
+    	try {
     	Thread.sleep(500);
 		driver.findElement(By.xpath("(//*[contains(text(),'Framesets ')])")).click();
 		Thread.sleep(500);
+    	}catch(Exception e) {
+			e.printStackTrace();
+		}
     }
 
-    public void userSelectsPriceLowToHigh()  throws Exception {
+    public void userSelectsPriceLowToHigh()  {
+    	try {
     	Thread.sleep(500);
 		WebElement sort_select = driver.findElement(By.xpath("//div[@class='category-products']//div[@class='toolbar-top clearfix']//div[@class=\"sorter\"]//div[@class='sort-by']//div[@class='input-box']//select"));
 		sort_select.click();
 		Select select = new Select(sort_select);
 		select.selectByVisibleText("Price: Low to High");
 		Thread.sleep(500);
+    }catch(Exception e) {
+		e.printStackTrace();
+	}
     }
 
-    public void thePriceShouldBeInAcscendingOrder()  throws Exception {
+    public void thePriceShouldBeInAcscendingOrder()  {
+    	try {
     	boolean result = false;
 		String text = driver.getCurrentUrl();
 		Assert.assertTrue(text!=null);
+    	}catch(Exception e) {
+			e.printStackTrace();
+		}
     }
     
-    public static double string_to_num(String number) {
-		double num = 0;
-		number = number.substring(1);
-		if(number.contains(",")) {
-			number.replace(",", "");
-		}
-		num = Float.parseFloat(number);
-		return num;
-	}
-    
-    public void userShutsDownTheBrowser()  throws Exception {
+    public void userShutsDownTheBrowser()  {
     	driver.quit();
     }
 }
