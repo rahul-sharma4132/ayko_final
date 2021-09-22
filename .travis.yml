@@ -4,3 +4,4 @@
 name: Java CI with Maven
 
 language: java
+run: mvn -B package --file pom.xml
