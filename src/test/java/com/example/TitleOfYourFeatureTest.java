@@ -7,9 +7,8 @@ public class TitleOfYourFeatureTest {
     public Actionwords actionwords;
 
     @BeforeMethod
-    @Parameters({"browser"})
-    public void setUp(String browserName) {
-        actionwords = new Actionwords(browserName);
+    public void setUp() {
+        actionwords = new Actionwords();
     }
 
     @Test
