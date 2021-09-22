@@ -1,8 +1,19 @@
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Java CI with Maven
+name: Ayko Test Run
 
 language: java
-script: mvn test -B
+sudo: false
 
+before_install:
+  - rvm install 2.5
+  - rvm use 2.5
+  - gem install hiptest-publisher
+  - hiptest-publisher -c hiptest-publisher.conf --only=tests --test-run-id=592092
+
+script:
+  - mvn package
+
+after_script:
+  - hiptest-publisher -c hiptest-publisher.conf -p "target/surefire-reports/junitreports/TEST-com.example.TitleOfYourFeatureTest.xml" --test-run-id=592092
