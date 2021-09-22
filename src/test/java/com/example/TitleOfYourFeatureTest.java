@@ -13,7 +13,7 @@ public class TitleOfYourFeatureTest {
     }
 
     @Test
-    public void accessoriesPageNavigation() throws Exception{
+    public void accessoriesPageNavigation(){
         // Given URL for Ribble Bikes works
         actionwords.uRLForRibbleBikesWorks();
         // When User hover over accessories in nav section
